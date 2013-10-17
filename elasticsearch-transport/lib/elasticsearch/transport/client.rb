@@ -107,7 +107,7 @@ module Elasticsearch
           when String
             # TODO: Handle protocol?
             host, port = host.split(':')
-            { :host => host, :port => port }
+            { :host => host, :port => port, :protocol => options[:protocol] }
           when Hash
             host
           else

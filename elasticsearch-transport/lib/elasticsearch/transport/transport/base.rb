@@ -32,7 +32,7 @@ module Elasticsearch
           @connections = __build_connections
 
           @serializer  = options[:serializer] || ( options[:serializer_class] ? options[:serializer_class].new(self) : DEFAULT_SERIALIZER_CLASS.new(self) )
-          @protocol    = options[:protocol] || DEFAULT_PROTOCOL
+          @protocol    = arguments[:protocol] || DEFAULT_PROTOCOL
 
           @logger      = options[:logger]
           @tracer      = options[:tracer]
